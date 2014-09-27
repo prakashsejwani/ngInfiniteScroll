@@ -45,7 +45,7 @@ mod.directive 'infiniteScroll', ['$rootScope', '$window', '$timeout', 'THROTTLE_
     # called in order to throttle the function call.
     handler = ->
       if container == windowElement
-        containerBottom = height(container) + pageYOffset(container[0].document.documentElement)
+        containerBottom = $window.innerHeight + pageYOffset(container[0].document.documentElement)
         elementBottom = offsetTop(elem) + height(elem)
       else
         containerBottom = height(container)
